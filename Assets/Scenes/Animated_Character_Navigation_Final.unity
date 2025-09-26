@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1292,6 +1292,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577121243}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1585616333 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 3fb269cac241226408bf2d63c2dbe471,
+    type: 3}
+  m_PrefabInstance: {fileID: 1978980602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1622287060 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 3fb269cac241226408bf2d63c2dbe471,
@@ -1791,11 +1797,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988761013}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.766, z: 0}
+  m_LocalRotation: {x: -0.0000000017462298, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0020828056, y: 0.047, z: 0.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2130074507}
+  m_Father: {fileID: 1585616333}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125344581
@@ -1905,6 +1911,7 @@ GameObject:
   - component: {fileID: 2130074503}
   - component: {fileID: 2130074508}
   - component: {fileID: 2130074509}
+  - component: {fileID: 2130074510}
   m_Layer: 0
   m_Name: Agente
   m_TagString: Untagged
@@ -2001,11 +2008,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130074502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6679258, y: 1.8524045, z: -2.9316633}
+  m_LocalPosition: {x: -0.86, y: 1.8524045, z: 0.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1622287061}
-  - {fileID: 1988761014}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2042,6 +2048,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a0bebed6302a3418de8f477abdcb55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reachLength: 1.5
+  reachLength: 3
   eye: {fileID: 1988761014}
   maxChasingTime: 2
+--- !u!136 &2130074510
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130074502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.74
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

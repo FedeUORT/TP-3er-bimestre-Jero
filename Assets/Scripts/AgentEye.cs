@@ -39,6 +39,6 @@ public class AgentEye : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawLine(eye.transform.position, eye.forward);
+        Gizmos.DrawLine(eye.transform.position, eye.transform.position + eye.forward * reachLength);
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.SceneManagement;
 public class AgentScript : MonoBehaviour
 {
     NavMeshAgent agent;
@@ -24,6 +24,7 @@ public class AgentScript : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         targetTR = wayPoints[0];
+        agent.destination = targetTR.position;
     }
 
     // Update is called once per frame
@@ -51,4 +52,14 @@ public class AgentScript : MonoBehaviour
         velocity = agent.velocity.magnitude;
         anim.SetFloat("Speed", velocity);
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Game Over"); 
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+
 }
